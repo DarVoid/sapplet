@@ -12,7 +12,7 @@
   },
   "tauri": {
     "systemTray": {
-      "iconPath": "icons/tray2.svg",
+      "iconPath": "icons/tray.png",
       "iconAsTemplate": true
     },
     "allowlist": {

@@ -12,7 +12,7 @@ use tauri::{
 const links: [(&str, &str, &str); 2] = [
     // social links
     ("open-github-personal", "Personal","https://github.com/darVoid/"),
-    ("open-github-work", "Work","https://google.com/"),
+    ("open-github-work", "Duque's Cult 🍆","https://google.com/"),
 ];
 
 fn main() {
@@ -61,7 +61,7 @@ fn main() {
 }
 
 fn onNewPullRequest(app: &AppHandle){
-    app.tray_handle().set_icon(tauri::Icon::Raw(include_bytes!("../icons/tray2.svg").to_vec())).unwrap();
+    app.tray_handle().set_icon(tauri::Icon::Raw(include_bytes!("../icons/tray.png").to_vec())).unwrap();
 }
 
 fn on_system_tray_event(
