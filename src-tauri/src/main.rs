@@ -61,7 +61,7 @@ fn main() {
 }
 
 fn onNewPullRequest(app: &AppHandle){
-    app.tray_handle().set_icon(tauri::Icon::Raw(include_bytes!("../icons/32x32.png").to_vec())).unwrap();
+    app.tray_handle().set_icon(tauri::Icon::Raw(include_bytes!("../icons/tray2.svg").to_vec())).unwrap();
 }
 
 fn on_system_tray_event(
@@ -79,12 +79,12 @@ fn on_system_tray_event(
                         app.get_window("main").unwrap();
                     match window.is_visible() {
                         Ok(true) => {
-                          window.hide().unwrap();
-                          item_handle.set_title("Show").unwrap();
+                            window.hide().unwrap();
+                            item_handle.set_title("Show").unwrap();
                         },
                         Ok(false) => {
-                          window.show();
-                          item_handle.set_title("Hide").unwrap();
+                            window.show();
+                            item_handle.set_title("Hide").unwrap();
                         },
                         Err(e) => unimplemented!("what kind of errors happen here?"),
                     }
